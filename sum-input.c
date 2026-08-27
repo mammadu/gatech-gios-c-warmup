@@ -11,14 +11,14 @@ int main(int argc, char *argv[])
     // open input_file for reading
     FILE *input_file = fopen(argv[1], "r");
     if (input_file == NULL){
-        printf("Error! could not open input_file\n");
+        printf("Error! could not open input_file: %s\n", argv[1]);
         return 1;
     }
 
     // open a output_file for writing
     FILE *output_file = fopen(argv[2], "w");
     if (output_file == NULL){
-        printf("Error! could not open output_file\n");
+        printf("Error! could not open output_file: %s\n", argv[2]);
         return 1;
     }
 
